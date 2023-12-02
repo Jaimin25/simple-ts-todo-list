@@ -37,12 +37,16 @@ function addListItem(task: Task) {
   const itemContainer = document.createElement('div');
   itemContainer.className = 'item-container';
   const item = document.createElement('li');
+  const checkbox = document.createElement('input');
+  checkbox.id = 'checkbox-for-' + task.id;
   const label = document.createElement('label');
+  label.htmlFor = 'checkbox-for-' + task.id;
   label.textContent = task.title;
   label.className = 'task-title';
-  const checkbox = document.createElement('input');
   const deleteBtn = document.createElement('button');
+  deleteBtn.className = 'delete-btn';
   const editBtn = document.createElement('button');
+  editBtn.className = 'edit-btn';
   editBtn.textContent = 'Edit';
   editBtn.addEventListener('click', () => {
     const newTitle = prompt('Enter new title', task.title);
