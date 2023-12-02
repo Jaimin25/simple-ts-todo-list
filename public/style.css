@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.list-component {
+  display: flex;
+  justify-content: center;
+}
+
+.item-container {
+  display: flex;
+  justify-content: center;
+}
+
+.task-title {
+  display: flex;
+  flex: 1 1 0%;
+}
